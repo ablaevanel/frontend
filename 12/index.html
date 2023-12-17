@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <h1>Список</h1>
+  <button onclick="fun()" id="button">Добавить элемент списка</button>
+  <script>
+    var btn = document.getElementById("button");
+    let ul = document.createElement('ul');
+    document.body.append(ul);
+    function fun(){
+      let data = prompt("Введите текст для элемента списка", "");
+
+      if (data) {
+        let li = document.createElement('li');
+        li.textContent = data;
+        ul.append(li);
+      }
+    }
+  </script>
+
+</body>
+</html>

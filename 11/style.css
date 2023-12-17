@@ -1,0 +1,119 @@
+.shopping__cart {
+  max-width: 700px;
+  max-height: 500px;
+  height: 100%;
+  width: 100%;
+  z-index: 6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0px 25px 100px 0px rgba(0, 0, 0, 0.25);
+  display: none;
+  border-radius: 20px;
+}
+
+img{
+  width:250px;
+  height:200px;
+  border-radius: 12px;
+}
+
+.header__nav2-link{
+  color:black;
+}
+
+#cards-grid{
+  display:grid;
+  height:100%;
+  width:100%;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+#crd{
+  background-color: rgb(42, 42, 42);
+  color:white;
+  padding:25px;
+  border-radius: 12px;
+}
+
+#container__cart{
+  height: 100%;
+  position: relative;
+  padding: 10px;
+}
+
+.cart__order_make{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  width: 97%;  
+  bottom: 20px;
+}
+
+#xmark{
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#eraser{
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.bascket__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket__product_img{
+  max-height: 120px;  
+  max-width: 170px;
+  width: 170px;
+}
+
+.bascket__num{
+  display: flex;
+  gap: 20px;
+}
+
+.num__ch{
+  display: flex;
+  gap: 4px;
+}
+
+.plus_minus{
+  cursor: pointer;
+}
+
+.backet__items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto; /* Разрешаем прокрутку содержимого корзины */
+  max-height: 300px; /* Определяем максимальную высоту корзины */
+}
+
+.fa-trash-can, .fa-cart-plus{
+  cursor: pointer;
+}
+
+#isEmpty, #order{
+  text-align: center;
+}

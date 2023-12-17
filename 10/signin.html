@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечная система</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="free-icon-solar-system-257153.png"> <!-- фавиконка -->
+    <link rel="stylesheet" href="style_auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+        <legend>Вход</legend>
+        <label for="name" name="name">Логин:</label>
+        <input type="text" name="name" id="name" required min="3" max="100" autofocus><br>
+        <label for="parol" name="parol">Пароль:</label>
+        <input type="password" name="parol" id="parol" required minlength="8"><br>
+        <input type="submit" value="отправить">
+        </fieldset>
+    </form>
+</body>
+</html>
+<script>
+    var login = prompt('Введите логин', '');
+    if(login == 'Админ'){
+        var pass = prompt('Введите пароль', '');
+        if(pass == 'Я главный'){
+            alert('Здравствуйте!');
+        } else if(pass == null){
+            alert('Отменено');
+        } else{
+            alert('Неверный пароль');
+        }
+    } else if(login == null || login == ''){
+        alert('Отменено');
+    } else{
+        alert('Я вас не знаю');
+    }
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа 11</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ba79f67c41.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+    <a href="#!" class="header__nav2-link">
+        <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+    </a><br><br>
+    <div class="shopping__cart" id="shoppingCart">
+        <div class="container" id="container__cart">
+            <i class="fa-solid fa-eraser" id="eraser"></i>
+            <i class="fa-solid fa-xmark" id="xmark"></i>
+            <h2 id="order">Заказ</h2>     
+
+            <p id="isEmpty">Корзина пуста</p>
+
+            <div class="backet__items"></div>
+
+            <div class="cart__order_make">
+                <div class="plashka3"></div>
+                <p id="final__cost">Сумма товаров: ......... RUB</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="cards-grid">
+        <div class="card2 it1" data-id="01" id="crd">
+            <img src="moon.jpg" alt="img" class="card2__img i1">
+            <h3 class="card__title">Луна</h3>
+            <i class="fa-solid fa-cart-plus" id="cart" data-cart></i>
+            <p class="card__price">300 000 000 000 ₽</p>
+        </div>
+        <div class="card2 it2" data-id="02" id="crd">
+            <img src="uranus.jpg" alt="img" class="card2__img i2">
+            <h3 class="card__title">Уран</h3>
+            <i class="fa-solid fa-cart-plus" id="cart" data-cart></i>
+            <p class="card__price">1 000 000 000 000 ₽</p>
+        </div>
+        <div class="card2 it3" data-id="03" id="crd">
+            <img src="neptune.jpg" alt="img" class="card2__img i3">
+            <h3 class="card__title">Нептун</h3>
+            <i class="fa-solid fa-cart-plus" id="cart" data-cart></i>
+            <p class="card__price">3 000 000 000 000 ₽</p>
+        </div>
+    </div>
+    <script src="bascket.js"></script>
+</body>
+</html>

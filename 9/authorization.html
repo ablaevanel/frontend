@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечная система</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="free-icon-solar-system-257153.png"> <!-- фавиконка -->
+    <link rel="stylesheet" href="style_auth.css">
+    <script>
+        var ans = prompt('Желаете пройти регистрацию на сайте?', '');
+        
+        if(ans == 'Да'){
+            alert('Круто!');
+        } else {
+            alert('Попробуй ещё раз');
+        }
+        /*
+        while(ans != 'Да'){
+            alert('Попробуй ещё раз');
+            ans = prompt('Желаете пройти регистрацию на сайте?', '');
+        }
+        alert('Круто!');
+        */
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+        <legend>Регистрация</legend>
+        <label for="name" name="name">Имя:</label>
+        <input type="text" name="name" id="name" required min="3" max="100" autofocus><br>
+        <label for="gender" name="gender">Пол:</label>
+        <input type="radio" value="Ж" name="gender" id="gender" required checked>Ж
+        <input type="radio" value="М" name="gender" id="gender" required>М<br>
+        <label for="tel" name="tel">Телефон:</label>
+        <input type="tel" name="tel" id="tel" required placeholder="+7" pattern="^\+7[0-9]{10}"><br>
+        <label for="email" name="email">Почта:</label>
+        <input type="email" name="email" id="email" required placeholder="example@gmail.com"><br>
+        <label for="parol" name="parol">Пароль:</label>
+        <input type="password" name="parol" id="parol" required minlength="8"><br>
+        <label for="check" name="check">Подписаться на рассылку:</label>
+        <input type="checkbox" name="check" id="check"><br>
+        <input type="submit" value="отправить">
+        </fieldset>
+    </form>
+</body>
+</html>

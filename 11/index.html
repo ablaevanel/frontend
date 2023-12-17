@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа 11</title>
+</head>
+<body>
+  <div class="cart">
+    <div class="numbers">
+        <input type="number" id="minPrice" placeholder="Минимальная цена">
+        <input type="number" id="maxPrice" placeholder="Максимальная цена">
+    </div><br>
+    <button class="btn" onclick="filterItemsByPrice()">Фильтровать по цене</button>
+    <button class="btn" onclick="addItem()">Добавить элемент</button>
+    <button class="btn" onclick="sortItemsUp()">Сортировка по возрастанию</button>
+    <button class="btn" onclick="sortItemsDown()">Сортировка по убыванию</button>
+    <br><br><div class="items" id="itemsContainer"></div><br>
+    <div class="items" id="itemsContainer2"></div>
+    <p>Сумма товаров: <span id="totalCost">0</span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

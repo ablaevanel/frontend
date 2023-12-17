@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="block-not-t" id="blockNotId"></div>
+
+    <div class="back-not" id="BackNotId">
+        <div class="back-circle">
+        <p id="quantityNotification" class="quantity-not">0</p>
+        <span id="bell"><i class="fa-regular fa-bell"></i></span>
+        </div>
+    </div>
+
+    <script>
+        let isNotificationEnabled = true; // флаг, определяющий, разрешено ли добавление новых уведомлений
+
+        function addNotification() {
+        if (isNotificationEnabled) {
+            let block = document.getElementById("blockNotId");
+            let quantityNotification = document.getElementById("quantityNotification");
+            let count = parseInt(quantityNotification.innerText);
+            count++;
+            quantityNotification.innerText = count;
+            let notification = document.createElement("div");
+            notification.className = "back-not-t";
+
+            let notificationText = document.createElement("p");
+            notificationText.className = "p-not-t";
+            notificationText.innerText = `Уведомление ${count}`;
+
+            notification.appendChild(notificationText);
+            block.appendChild(notification);
+        }
+        }
+
+        // Функция, которая блокирует добавление новых уведомлений на 10 секунд
+        function delayAddNotification() {
+        isNotificationEnabled = false; // блокируем добавление уведомлений
+        addNotification(); // вызываем функцию добавления уведомления
+        setTimeout(() => {
+            isNotificationEnabled = true; // разблокируем добавление уведомлений после истечения времени
+        }, 10000); // блокировка на 10 секунд (10000 миллисекунд)
+        }
+
+        // Вызываем функцию delayAddNotification при нажатии на кнопку или другое событие
+        // Например, при нажатии на кнопку:
+        document
+        .getElementById("BackNotId")
+        .addEventListener("click", delayAddNotification);
+        setInterval(addNotification, 3000);
+    </script>
+</body>
+</html>
