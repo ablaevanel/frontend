@@ -1,0 +1,29 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    margin: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.store, .cart {
+    border: 1px solid #000000;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item, #cart {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #000000;
+    cursor: grab;
+}
+
+.cart {
+    margin-left: 20px;
+}
+
+.cart-items {
+    min-height: 100px;
+    border: 2px dashed #333;
+}

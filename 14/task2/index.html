@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Галерея</title>
+  <link rel="stylesheet" href="gallery.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="container">
+        <p><img id="largeImg" src="https://kartin.papik.pro/uploads/posts/2023-06/thumbs/1686914434_kartin-papik-pro-p-kartinki-smeshnie-koti-s-tsvetami-42.jpg" alt="Large image"></p>
+        <ul id="thumbs">
+          <li>
+            <a href="https://i.pinimg.com/736x/f4/d2/96/f4d2961b652880be432fb9580891ed62.jpg" id="Im2"><img src="https://i.pinimg.com/736x/f4/d2/96/f4d2961b652880be432fb9580891ed62.jpg"></a>
+          </li>
+          <li>
+            <a href="https://kartin.papik.pro/uploads/posts/2023-06/thumbs/1686914434_kartin-papik-pro-p-kartinki-smeshnie-koti-s-tsvetami-42.jpg" id="Im3"><img src="https://kartin.papik.pro/uploads/posts/2023-06/thumbs/1686914434_kartin-papik-pro-p-kartinki-smeshnie-koti-s-tsvetami-42.jpg"></a>
+          </li>
+          <li>
+            <a href="https://images.techinsider.ru/upload/img_cache/f95/f95f46aa2b36d173110a2b49d847c1bb_cropped_666x883.jpg" id="Im4"><img src="https://images.techinsider.ru/upload/img_cache/f95/f95f46aa2b36d173110a2b49d847c1bb_cropped_666x883.jpg"></a>
+          </li>
+          <li>
+            <a href="https://avatars.mds.yandex.net/i?id=bedc7c00114bb52bb8cc5d91e65debe09ef7d7f7-8244093-images-thumbs&n=13" id="Im5"><img src="https://avatars.mds.yandex.net/i?id=bedc7c00114bb52bb8cc5d91e65debe09ef7d7f7-8244093-images-thumbs&n=13"></a>
+          </li>
+          <li>
+            <a href="https://pic.rutube.ru/video/8f/46/8f460d6d088130c55bdc1f95581074d4.jpg" id="Im6"><img src="https://pic.rutube.ru/video/8f/46/8f460d6d088130c55bdc1f95581074d4.jpg"></a>
+          </li>
+        </ul>
+    </div>
+
+  <script>
+    thumbs.onclick = function(event) {
+      let thumbnail = event.target.closest('a');
+
+      if (!thumbnail) return;
+      showThumbnail(thumbnail.href, thumbnail.title);
+      event.preventDefault();
+    }
+
+    function showThumbnail(href, title) {
+      largeImg.src = href;
+      largeImg.alt = title;
+    }
+  </script>
+
+</body>
+</html>

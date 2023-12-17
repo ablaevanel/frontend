@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="store">
+    <div class="item" data-price="200" draggable="true">Товар 1 - 200 P</div>
+    <div class="item" data-price="1500" draggable="true">Товар 2 - 1500 P</div>
+    <div class="item" data-price="999" draggable="true">Товар 3 - 999 P</div>
+</div>
+
+<div class="cart">
+    <h2 style="text-align: center">Корзина</h2>
+    <div id="cart" class="cart-items" droppable="true"></div>
+    <p id="total">Итого: 0 Р</p>
+</div>
+
+</body>
+
+</html>
+
+<script src="script.js"></script>
