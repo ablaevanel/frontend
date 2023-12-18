@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+        <p>Старый контент</p>
+    </div>
+</body>
+</html>
+<script>
+    const content = document.querySelector('.content');
+    let isLoading = false;
+
+    function loadMoreData() {
+        const newContent = document.createElement('p');
+        newContent.innerHTML = 'Новый контент';
+        content.appendChild(newContent);
+        isLoading = false;
+    }
+
+    window.addEventListener('scroll', function(event) {
+        if (isLoading) {
+            return;
+        }
+        
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight,
+            document.body.clientHeight,
+            document.documentElement.clientHeight
+        );
+        
+        if (scrollY + windowHeight >= documentHeight - 100) {
+            isLoading = true;
+            loadMoreData();
+        }
+    }, false);
+</script>
